@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #080C0E;
+    color: #F1F5F9;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Palo Alto Cyber Command Background Textures */
+.bg-palo-dark {
+  background-color: #080C0E;
+}
+
+.bg-palo-card {
+  background-color: #0F1418;
+}
+
+.bg-palo-elevated {
+  background-color: #141B21;
+}
+
+.border-palo {
+  border-color: #1D2731;
+}
+
+.border-palo-highlight {
+  border-color: #2D3D4E;
+}
+
+/* Palo Alto Cyber Grid & Telemetry Patterns */
+.bg-grid-palo {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(250, 88, 45, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-cyber-dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(250, 88, 45, 0.12) 1px, transparent 1px);
+}
+
+/* Pulsing radar scan effect */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
+
+/* Custom scrollbar for Palo Alto terminal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080C0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2C38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FA582D;
+}
